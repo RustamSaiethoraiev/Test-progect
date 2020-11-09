@@ -4,11 +4,14 @@
 body {
 background-color:#F4F4F4 ;
 margin: 0 ;
+font-family:"Roboto", sans-serif ;
+
 }
 .container {
     max-width:  1170px; 
     margin: 0 auto;
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 .row {
     display: flex;
@@ -23,4 +26,73 @@ margin: 0 ;
     width: 270px;
     height: 200px;
     background-color: crimson;
+}
+/* cards */
+.card {
+    background-color: #fff;
+    width: 270px;
+    position: relative;
+}
+.card__bages {
+    display:flex;
+    
+}
+.card__badge {
+display:inline-block;
+height: 22px;
+padding: 0 10px;
+border-radius: 4px;
+background-color: darkgoldenrod;
+color:#000
+
+}
+.card__img {
+}
+.card__content {
+    padding: 15px 15px 20px 15px;
+}
+.card__title {
+    margin:0;
+   margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #000000;
+    
+}
+.card__title:first-letter{
+    color:#25e61b
+}
+.card__term {
+font-size: 14px;
+font-weight: 400;
+line-height: 1.14;
+letter-spacing: 0em;
+color:#000;
+margin-bottom: 10px;
+
+}
+.card__metro {
+    font-size: 14px;
+font-weight: 400;
+line-height: 1.14;
+letter-spacing: 0em;
+color:#000;
+margin-bottom: 10px;
+}
+.card__metro::before {
+    content:url('./../img/icon/Moscow_Metro\ 1.svg');
+    width: 16px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 10px;
+}
+.card__adress {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0em;
+    color: #777777;
+    margin-bottom: 10px;;
 }
