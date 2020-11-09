@@ -35,6 +35,9 @@ font-family:"Roboto", sans-serif ;
 }
 .card__bages {
     display:flex;
+    position: absolute;
+    font-size: 14px;
+
     
 }
 .card__badge {
@@ -42,10 +45,20 @@ display:inline-block;
 height: 22px;
 padding: 0 10px;
 border-radius: 4px;
-background-color: darkgoldenrod;
-color:#000
+line-height: 23px;
 
 }
+.card__badge:first-child{
+background: #FFCF26;
+color: #000000;
+margin: 10px;
+}
+.card__badge:last-child{
+color: #fff;
+background: #11BE75;
+margin-top: 10px;
+}
+
 .card__img {
 }
 .card__content {
