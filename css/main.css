@@ -4,8 +4,7 @@
 body {
 background-color:#F4F4F4 ;
 margin: 0 ;
-font-family:"Roboto", sans-serif ;
-
+font-family:"Roboto", sans-serif 
 }
 .container {
     max-width:  1170px; 
@@ -19,26 +18,40 @@ font-family:"Roboto", sans-serif ;
 }
 .main {
     width: 870px;
-    height: 200px;
-    background-color: blue;
 }
 .sidebar {
     width: 270px;
-    height: 200px;
     background-color: crimson;
 }
-/* cards */
+.cards__holder{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards__holder>a{
+    margin-bottom: 30px;
+}
+/* Cards */
 .card {
     background-color: #fff;
     width: 270px;
     position: relative;
 }
+a.card__link{
+    display:inline-block;
+    text-decoration: none; 
+    transition: all 0.5s;
+}
+a.card__link:hover{
+    opacity:0.9;
+    transform: translateY(-5px);
+   
+
+}
 .card__bages {
     display:flex;
     position: absolute;
     font-size: 14px;
-
-    
 }
 .card__badge {
 display:inline-block;
@@ -46,7 +59,6 @@ height: 22px;
 padding: 0 10px;
 border-radius: 4px;
 line-height: 23px;
-
 }
 .card__badge:first-child{
 background: #FFCF26;
@@ -59,10 +71,12 @@ background: #11BE75;
 margin-top: 10px;
 }
 
-.card__img {
+img{
+    display: block;
 }
+
 .card__content {
-    padding: 15px 15px 20px 15px;
+    padding: 15px 15px 20px;
 }
 .card__title {
     margin:0;
@@ -80,7 +94,6 @@ margin-top: 10px;
 font-size: 14px;
 font-weight: 400;
 line-height: 1.14;
-letter-spacing: 0em;
 color:#000;
 margin-bottom: 10px;
 
@@ -89,7 +102,6 @@ margin-bottom: 10px;
     font-size: 14px;
 font-weight: 400;
 line-height: 1.14;
-letter-spacing: 0em;
 color:#000;
 margin-bottom: 10px;
 }
@@ -108,4 +120,86 @@ margin-bottom: 10px;
     letter-spacing: 0em;
     color: #777777;
     margin-bottom: 10px;;
+}
+/*Button more*/
+.btn-more  {
+height: 80px;
+width: 100%;
+border-radius: 4px;
+background: #E5E5E5;
+border: none;
+font-size: 18px;
+font-weight: 400;
+text-align: center;
+color: #4290C9;
+cursor: pointer;
+line-height: 22px;
+}
+.btn-more:hover{
+    background-color: #dfcdcd ;
+    border:none;
+    opacity: 0.9;
+    transition: 0.6s;
+    
+}
+.btn-more img {
+    display: inline-block;
+    vertical-align: middle;
+}
+/*Widget*/
+.widget {
+
+}
+.widget__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #000000;
+    position: relative;
+    margin-bottom: 21px;
+}
+.widget__title::after{
+    content:url("./../img/icon/chevron-up.svg");
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+}
+.widget__body {
+}
+
+.location {
+}
+.location__row {
+    display: flex;
+    width: 270px;
+   
+}
+.location__btn {
+font-family: Roboto;
+font-size: 14px;
+font-weight: 500;
+line-height: 50px;
+border:none;
+background-color: transparent;
+color:#000;
+text-align: center;
+align-items: stretch;
+flex-grow: 1;
+padding:0 auto;
+}
+.location__btn:active{
+    background-color: #FFCF26;
+
+}
+.new_div{
+    display:flex;
+    flex-direction:row-reverse;
+}
+.items{
+    width:50px;
+    background-color: coral;
+    border:solid black 1px;
+   
 }
