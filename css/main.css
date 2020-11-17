@@ -4,7 +4,7 @@
 body {
 background-color:#F4F4F4 ;
 margin: 0 ;
-font-family:"Roboto", sans-serif 
+font-family:"Roboto", sans-serif ;
 }
 .container {
     max-width:  1170px; 
@@ -146,7 +146,7 @@ line-height: 22px;
     display: inline-block;
     vertical-align: middle;
 }
-/*Widget*/
+/* First Widget*/
 .widget + .widget {
 margin-top: 30px;
 }
@@ -210,10 +210,14 @@ border-top: none;
 .location__checkbox:checked + .location__btn:hover{
     background-color: #e6b813;
 }
+/*  Widget radio buttons */
 .radio{
     display:block;
     position: relative;
     cursor: pointer;
+}
+.radio+.radio{
+    margin-top:15px;
 }
 .radio__real {
     opacity: 0;
@@ -251,10 +255,86 @@ vertical-align: bottom;
 .radio__title {
     font-family: Roboto;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.18;
     
 }
-.radio+.radio{
-    margin-top:15px;
+.radio__real:checked ~ .radio__title{
+    font-weight: 500;
+}
+/* Widget heckboxes */
+.checkbox {
+    display:block;
+    cursor: pointer;
+}
+.checkbox+.checkbox{
+    margin-top: 15px;
+}
+.checkbox__real {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+}
+.checkbox__fake {
+    display:inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    border: 1px solid #777777;
+    background-color: transparent;
+    position: relative;
+    vertical-align: bottom;
+}
+.checkbox__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.18;
+}
+.checkbox__real:checked ~ .checkbox__title{
+    font-weight: 500;
+}
+.checkbox__real:checked+.checkbox__fake{
+    background: #FFE074;
+
+}
+.checkbox__real:checked+.checkbox__fake::before{
+    content:"";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background-image: url(./../img/icon/checkbox-checked.svg);
+    background-repeat: no-repeat;
+    background-size:initial ;
+    background-position: center;
+}
+.widget__show-hidden{
+display:inline-block;
+background: transparent;
+border: none;
+font-family: inherit;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.18;
+letter-spacing: 0em;
+text-align: left;
+color: #4290C9;
+cursor: pointer;
+transition : all 0.2s ease-in ;
+margin-top:15px;
+margin-bottom: 30px;
+}
+.widget__show-hidden:hover{
+color: #0574c4;
+text-decoration: underline;
+border:none
+}
+/* Hidden elements widget */
+
+.hidden-elements {
+
 }
