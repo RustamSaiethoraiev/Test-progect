@@ -21,7 +21,7 @@ font-family:"Roboto", sans-serif
 }
 .sidebar {
     width: 270px;
-    background-color: crimson;
+   
 }
 .cards__holder{
     display:flex;
@@ -147,8 +147,8 @@ line-height: 22px;
     vertical-align: middle;
 }
 /*Widget*/
-.widget {
-
+.widget + .widget {
+margin-top: 30px;
 }
 .widget__title {
     font-weight: bold;
@@ -174,10 +174,10 @@ line-height: 22px;
 .location__row {
     display: flex;
     width: 270px;
-   
+    border: 1px solid #D6D6D6
 }
 .location__btn {
-font-family: Roboto;
+font-family: inherit;
 font-size: 14px;
 font-weight: 500;
 line-height: 50px;
@@ -187,19 +187,74 @@ color:#000;
 text-align: center;
 align-items: stretch;
 flex-grow: 1;
-padding:0 auto;
+cursor: pointer;
+transition:background-color 0.5s ease-in ;
 }
-.location__btn:active{
+
+.location__row:first-child{
+border-radius: 4px 4px 0 0 ;
+}
+.location__row:last-child{
+border-radius: 0 0 4px 4px ;
+border-top: none;
+}
+.location__checkbox{
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+}
+.location__checkbox:checked + .location__btn{
     background-color: #FFCF26;
+}
+.location__checkbox:checked + .location__btn:hover{
+    background-color: #e6b813;
+}
+.radio{
+    display:block;
+    position: relative;
+    cursor: pointer;
+}
+.radio__real {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+}
+.radio__fake {
+display:inline-block;
+border: 1px solid #777777;
+width: 20px;
+height: 20px;
+background-color: #FFFFFF;
+border-radius: 50%;
+position:relative;
+margin-right: 10px;
+vertical-align: bottom;
+
 
 }
-.new_div{
-    display:flex;
-    flex-direction:row-reverse;
+.radio__real:checked+.radio__fake::before {
+    content:"";
+    width: 8px;
+    height: 8px;
+    background: #3C3C3C;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    top:50%;
+    left:50%;
 }
-.items{
-    width:50px;
-    background-color: coral;
-    border:solid black 1px;
-   
+.radio__real:checked+.radio__fake{
+    background-color: orange;
+}
+.radio__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    
+}
+.radio+.radio{
+    margin-top:15px;
 }
