@@ -1,0 +1,51 @@
+.menu-icon {
+    width:30px;
+    height:5px;
+    background-color:rgb(39, 185, 204);
+    position: relative
+    } 
+  .menu-icon::before {
+    width:30px;
+    height:5px;
+    background-color:rgb(39, 185, 204);
+    content:"";
+    position:absolute;
+    top:-10px;
+    left:0;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s ;
+    }
+  .menu-icon::after {
+    width:30px;
+    height:5px;
+    background-color:rgb(39, 185, 204);
+    content:"";
+    position:absolute;
+    top:10px;
+    left:0;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s ;
+    }
+  .menu-icon-active {
+    background-color:transparent;
+  }
+  .menu-icon-active::before{
+    transform:rotate(45deg);
+    top:0;
+    transition: top 0.2s linear, transform 0.3s ease-in 0.2s ;
+  }
+  .menu-icon-active::after{
+    transform:rotate(-45deg);
+    top:0;
+    transition: top 0.2s linear, transform 0.3s ease-in 0.2s ;
+  }
+  .menu-icon-wraper{
+    height:30px;
+    width:30px;
+    background-color:transparent;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+  }
