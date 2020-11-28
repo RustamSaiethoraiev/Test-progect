@@ -1,3 +1,4 @@
+
 @import 'icon.css';
 * {
     box-sizing: border-box;
@@ -38,7 +39,7 @@ font-family:"Roboto", sans-serif ;
 .main {
     width: 870px;
 }
-.sidebar {
+.sidebar { 
     width: 270px;
     min-width: 200px;
     
@@ -85,12 +86,12 @@ font-family:"Roboto", sans-serif ;
     width: 270px;
     position: relative;
 }
-a.card__link{
+.card__link{
     display:inline-block;
     text-decoration: none; 
     transition: all 0.5s;
 }
-a.card__link:hover{
+.card__link:hover{
     opacity:0.9;
     transform: translateY(-5px);
 }
@@ -165,7 +166,11 @@ margin-bottom: 10px;
     line-height: 1.14;
     letter-spacing: 0em;
     color: #777777;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+}
+/* Hiden cards */
+.card__link__hidden{
+    display: none;
 }
 /*Button more*/
 .btn-more  {
@@ -202,6 +207,11 @@ margin-top: 30px;
     color: #000000;
     position: relative;
     margin-bottom: 21px;
+    cursor: pointer;
+}
+.widget__title__active::after{
+ transform: rotate(180deg);
+
 }
 .widget__title::after{
     content:url("./../img/icon/chevron-up.svg");
@@ -210,6 +220,9 @@ margin-top: 30px;
     top: 0;
     width: 20px;
     height: 20px;
+}
+.widget__body__hidden{
+display: none;
 }
 .location__row {
     display: flex;
